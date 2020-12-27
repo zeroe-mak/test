@@ -11,7 +11,7 @@ function readInt(){
 }
 
 function write(text){
-    document.getElementById("info").innerHTML += '<br>Ваш пароль: ' + text;
+    document.getElementById("info").innerHTML = '<br><b>Ваш пароль: </b>' + text;
 }
 
 function getRandomCode(max){
@@ -19,7 +19,7 @@ function getRandomCode(max){
 }
 
 function generateCode(length){
-    var letters = ["A", "a", "B", "b", "C", "c", "D", "d", "E", "e", "F", "f", "G", "g", "H", "h", "I", "i", "J", "j", "K", "k", "L", "l", "M", "m", "N", "n", "O", "o", "P", "Q", "q", "R", "r", "S", "s", "T", "t", "U", "u", "V", "v", "W", "w", "X", "x", "Y", "y", "Z", "z", "1", "2", "3", "4", "5", "6", "7", "8", "9","0","!","@","#","$","%","^","&","*","(",")","-","_","=","+","/","\\",".",",","~","`","'",];
+    var letters = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPQqRrSsTtUuVvWwXxYyZz1234567890!@#$%^&*()-_=+/\\.,~`\'";
     var code = "";
     for(var i = 0; i < length; i++){
     var n = getRandomCode(letters.length - 1);
@@ -40,9 +40,9 @@ function generate(length){
 <div class="content">
 <div class="header">
 <a href="index.php">Главная</a>
-<a href="puzzle.html">Загадки</a>
-<a href="guess.html">Угадайка</a>
-<a href="guess_multi.html">Угадайка мультиплеер</a>
+<a href="puzzle.php">Загадки</a>
+<a href="guess.php">Угадайка</a>
+<a href="guess_multi.php">Угадайка для двоих</a>
 <a href="#">Генератор паролей</a>
 </div>
 
@@ -54,7 +54,7 @@ function generate(length){
 
         <div class="box">
 
-            <p id="info"><i>Укажите желаемую длинну пароля.</i></p>
+            <p id="info"><b><i>Укажите желаемую длинну пароля.</i></b></p>
             <input type="text" id="userAnswer">
 
             <br>
